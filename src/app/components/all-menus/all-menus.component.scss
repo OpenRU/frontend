@@ -1,0 +1,29 @@
+@use 'colors' as *;
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu {
+  color: $orange;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.menu-available {
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 30rem;
+  max-width: 90%;
+  gap: 2rem;
+  text-align: center;
+}

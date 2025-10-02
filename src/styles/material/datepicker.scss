@@ -1,0 +1,12 @@
+@use '@angular/material' as mat;
+@use 'colors' as *;
+
+:root {
+  @include mat.datepicker-overrides((
+    calendar-container-shape: 10px,
+    calendar-date-today-selected-state-outline-color: $green,
+    calendar-date-today-outline-color: $green,
+    calendar-date-selected-state-text-color: $white,
+    calendar-date-selected-state-background-color: $green,
+  ));
+}

@@ -1,0 +1,57 @@
+<app-section title="CARDÁPIO" description="Cadastrar cardápio"></app-section>
+<section class="section-two">
+  <div class="container-create">
+    <div class="image">
+      <img src="assets/cardapio.jpg" />
+    </div>
+    <div class="form">
+      <div class="text-create">
+        <h3>Cadastro</h3>
+        <span class="row"></span>
+      </div>
+      <div class="text-title">
+        <h1>Insira as informações</h1>
+      </div>
+      <div class="input-form">
+        <form [formGroup]="menuForm" (ngSubmit)="onSubmit()">
+          <app-input
+            type="text"
+            label="Prato"
+            placeholder="Nome do prato principal"
+            [control]="main_dish"
+          ></app-input>
+          <app-input
+            type="text"
+            label="Guarnição"
+            placeholder="Nome da guarnição"
+            [control]="side_dish"
+          ></app-input>
+          <app-input
+            type="text"
+            label="Sobremesa"
+            placeholder="Nome da sobremesa"
+            [control]="dessert"
+          ></app-input>
+          <app-input
+            type="text"
+            label="Bebida"
+            placeholder="Nome da bebida"
+            [control]="drink"
+          ></app-input>
+          <app-input
+            type="text"
+            label="Salada"
+            placeholder="Nome da salada"
+            [control]="salad"
+          ></app-input>
+          <app-date
+            [control]="date"
+            [minDate]="minDate()"
+            [maxDate]="maxDatee()"
+          ></app-date>
+          <app-button text="Cadastrar cardápio" type="submit"></app-button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

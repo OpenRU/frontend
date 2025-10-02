@@ -1,0 +1,13 @@
+@use "@angular/material" as mat;
+@use "../colors.scss" as *;
+
+:root {
+  @include mat.form-field-overrides(
+    (
+      outlined-container-shape: 30px,
+      outlined-outline-color: gray,
+      outlined-focus-outline-color: gray,
+      outlined-focus-label-text-color: $dark-green,
+    )
+  );
+}

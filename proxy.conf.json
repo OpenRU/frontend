@@ -1,0 +1,17 @@
+{
+  "/authentication": {
+    "target": "https://1736e818cd2a.ngrok-free.app/api/v1",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/menus": {
+    "target": "http://127.0.0.1:5000",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/items": {
+    "target": "http://localhost:8080",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

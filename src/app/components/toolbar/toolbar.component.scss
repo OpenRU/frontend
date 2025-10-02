@@ -1,0 +1,47 @@
+@use "colors" as *;
+
+.logo img {
+  height: 5rem;
+}
+
+.toolbar-nav {
+  background: #fff;
+}
+
+.container-toolbar {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.menu {
+  display: flex;
+  gap: 4px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.logout- {
+  background-color: $red;
+}
+
+button[matButton] {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+  color: black;
+  font-size: 0.9em;
+  font-weight: 700;
+
+  mat-icon {
+    color: black;
+  }
+}

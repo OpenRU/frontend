@@ -1,0 +1,23 @@
+<section>
+  <p class="menu">Cardápios</p>
+  <h1 class="menu-available">Todos os cardápios disponíveis</h1>
+  <img src="assets/divider.png" />
+  <div class="content">
+    @for (menu of data$; track menu) {
+    <app-card
+      class="all-menu"
+      [srcImage]="srcImage"
+      [altImage]="'exemplo'"
+      [title]="'Prato: ' + menu.main_dish"
+      [subtitle]="'Guarnição: ' + menu.side_dish"
+      [textDate]="menu.date"
+      [textTwo]="'Salada: ' + menu.salad"
+      [textThree]="'Bebida: ' + menu.drink"
+      [text]="'Sobremesa: ' + menu.dessert"
+      (delete)="deleteMenu(menu.id)"
+    ></app-card>
+  } @empty {
+    <p>Nenhum cardápio para mostrar</p>
+  }
+  </div>
+</section>

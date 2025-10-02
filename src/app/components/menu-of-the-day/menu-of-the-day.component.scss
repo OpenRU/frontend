@@ -1,0 +1,40 @@
+@use "colors" as *;
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  min-height: 50rem;
+  background: url("/assets/prato.png") center/cover no-repeat;
+
+  .content {
+    color: white;
+    margin-left: 10rem;
+    max-width: 30%;
+    width: 100%;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 3.5rem;
+      color: $orange;
+    }
+
+    p {
+      margin: 3rem 0;
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    ul {
+      padding: 2em 0;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    li {
+      font-size: 1.3em;
+    }
+  }
+}

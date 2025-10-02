@@ -1,0 +1,52 @@
+@use "colors" as *;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 35rem;
+  text-align: center;
+  gap: 50px;
+}
+
+.welcome {
+  img {
+    max-width: 15rem;
+    max-height: 15rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.create-account {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: $red;
+
+  &:hover {
+    text-decoration: underline;
+    color: $red;
+  }
+}
+
+@media (max-width: 599px) {
+  .form-container {
+    padding: 20px;
+  }
+}

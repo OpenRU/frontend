@@ -1,0 +1,61 @@
+<app-header></app-header>
+<mat-toolbar class="toolbar-nav">
+  <div class="container-toolbar">
+    <a class="logo" routerLink="/">
+      <img src="assets/logo.png" alt="OpenRU" />
+    </a>
+    <span class="spacer"></span>
+    <nav class="menu">
+      <button matButton routerLink="/home">
+        Início
+      </button>
+      <button matButton [matMenuTriggerFor]="cardapio">
+        Cardápio
+        <mat-icon fontIcon="arrow_drop_down"></mat-icon>
+      </button>
+      <button matButton [matMenuTriggerFor]="estoque">
+        Estoque
+        <mat-icon fontIcon="arrow_drop_down"></mat-icon>
+      </button>
+      <button matButton [matMenuTriggerFor]="refeicoes">
+        Refeições
+        <mat-icon fontIcon="arrow_drop_down"></mat-icon>
+      </button>
+    </nav>
+    <span class="spacer"></span>
+      <app-button text="Sair" (click)="logout()" ></app-button>
+  </div>
+</mat-toolbar>
+
+<mat-menu #cardapio="matMenu" xPosition="after">
+  <button mat-menu-item routerLink="/create-menu">
+    Cadastrar cardápio
+    <mat-icon fontIcon="menu_book"></mat-icon>
+  </button>
+</mat-menu>
+
+<mat-menu #estoque="matMenu" xPosition="after">
+  <button mat-menu-item routerLink="/create-items">
+    Cadastrar items
+    <mat-icon fontIcon="inventory"></mat-icon>
+  </button>
+  <button mat-menu-item routerLink="/create-recipes">
+    Cadastrar refeições
+    <mat-icon fontIcon="inventory"></mat-icon>
+  </button>
+</mat-menu>
+
+<mat-menu #refeicoes="matMenu" xPosition="after">
+  <button mat-menu-item>
+    Cadastrar refeição
+    <mat-icon fontIcon="restaurant"></mat-icon>
+  </button>
+  <button mat-menu-item>
+    <mat-icon fontIcon="restaurant"></mat-icon>
+    Ver refeições
+  </button>
+  <button mat-menu-item>
+    Mnhas refeições
+    <mat-icon fontIcon="restaurant"></mat-icon>
+  </button>
+</mat-menu>

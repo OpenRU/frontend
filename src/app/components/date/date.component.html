@@ -1,0 +1,16 @@
+<mat-form-field appearance="outline" class="example-full-width">
+  <mat-label>{{ label }}</mat-label>
+  <input
+    matInput
+    readonly
+    [matDatepicker]="picker"
+    [formControl]="control"
+    [min]="minDate"
+    [max]="maxDate"
+    placeholder="DD/MM/YYYY"
+  />
+  <mat-datepicker-toggle matIconSuffix [for]="picker">
+    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+  </mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>

@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="form-container">
+    <div class="welcome">
+      <img src="assets/logo.png" alt="logo do sistema" />
+    </div>
+    <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <app-input
+        type="text"
+        label="Email/Username"
+        placeholder="Digite seu email ou username"
+        class="auth"
+        [control]="login"
+      ></app-input>
+      <app-input
+        type="password"
+        label="Senha"
+        placeholder="Digite sua senha"
+        class="auth"
+        [control]="password"
+      ></app-input>
+      <app-button type="submit" text="Entrar"></app-button>
+    </form>
+    <div class="create-account">
+      <p>Não tem uma conta?</p>
+      <a routerLink="/register">Registre-se</a>
+    </div>
+  </div>
+</div>

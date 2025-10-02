@@ -1,0 +1,47 @@
+<app-section title="ITEMS" description="Cadastrar items"></app-section>
+<section class="section-two">
+  <div class="container-create">
+    <div class="image">
+      <img src="assets/items.jpg" />
+    </div>
+    <div class="form">
+      <div class="text-create">
+        <h3>Cadastro</h3>
+        <span class="row"></span>
+      </div>
+      <div class="text-title">
+        <h1>Insira as informações</h1>
+      </div>
+      <div class="input-form">
+        <form [formGroup]="itemsForm" (ngSubmit)="onSubmit()">
+          <app-input
+            type="text"
+            label="Nome"
+            placeholder="Nome do item"
+            [control]="name"
+          ></app-input>
+          <app-input
+            type="number"
+            label="Quantidade"
+            placeholder="Quantidade do item"
+            [control]="quantity"
+          ></app-input>
+          <app-select
+            label="Peso"
+            labelOption="Selecione o peso"
+            [options]="weightItem"
+            [(selected)]="itemSelected"
+            [control]="measurementUnit"
+          ></app-select>
+          <app-input
+            type="text"
+            label="Fornecedor"
+            placeholder="Nome do fornecedor"
+            [control]="supplier"
+          ></app-input>
+          <app-button text="Cadastrar cardápio" type="submit"></app-button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

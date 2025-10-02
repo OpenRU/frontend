@@ -1,0 +1,14 @@
+@use "@angular/material" as mat;
+@use "../colors.scss" as *;
+
+:root {
+  @include mat.button-overrides(
+    (
+      filled-container-height: 50px,
+      filled-container-shape: 20px,
+      filled-container-color: $green,
+      filled-label-text-size: 16px,
+      outlined-outline-color: $orange,
+    )
+  );
+}

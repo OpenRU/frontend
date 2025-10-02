@@ -1,0 +1,41 @@
+@use "colors" as *;
+
+header {
+  background-color: $dark-green;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+
+  mat-icon {
+    color: $yellow;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 90%;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  img {
+    height: 2.4rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

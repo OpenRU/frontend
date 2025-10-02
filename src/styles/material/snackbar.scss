@@ -1,0 +1,13 @@
+@use '@angular/material' as mat;
+@use 'colors' as *;
+
+:root {
+  @include mat.snack-bar-overrides((
+    supporting-text-color: white,
+    supporting-text-size: 18px,
+    container-shape: 7px,
+    supporting-text-line-height: 35px,
+    button-color: $yellow,
+    // container-color: $gray-50
+  ));
+}

@@ -1,0 +1,18 @@
+<section>
+  <div class="content">
+    <h1>Cardápio do dia</h1>
+    <h2>{{ data$!.date | prefixDate }}</h2>
+    @if (data$) {
+      <ul>
+        <li>Prato: {{ data$.main_dish }}</li>
+        <li>Guanição: {{ data$.side_dish }}</li>
+        <li>Salada: {{ data$.salad }}</li>
+        <li>Sobremesa: {{ data$.dessert }}</li>
+        <li>Bebida: {{ data$.drink }}</li>
+      </ul>
+    } @else {
+      <p>Nenhum cardápio do dia disponível</p>
+    }
+    <app-button text="Fazer pedido" (click)="onClick()"></app-button>
+  </div>
+</section>

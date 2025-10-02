@@ -1,0 +1,21 @@
+<mat-card appearance="outlined">
+  <mat-card-header class="card-header">
+    <mat-card-title>{{ title }}</mat-card-title>
+    <mat-card-subtitle> {{ subtitle }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="srcImage" [alt]="altImage" />
+  <mat-card-content class="card-content">
+    <p>{{ text }}</p>
+    <p>{{ textTwo }}</p>
+    <p>{{ textThree }}</p>
+    <p>{{ textDate | prefixDate }}</p>
+  </mat-card-content>
+  <div class="icons">
+    <button mat-icon-button (click)="editMenu()" class="edit">
+      <mat-icon fontIcon="edit"></mat-icon>
+    </button>
+    <button mat-icon-button (click)="deleteMenu()" class="delete">
+      <mat-icon fontIcon="delete"></mat-icon>
+    </button>
+  </div>
+</mat-card>

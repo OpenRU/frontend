@@ -1,0 +1,21 @@
+<section>
+  <p class="items">Items</p>
+  <h1 class="items-available">Todos os items disponíveis</h1>
+  <img src="assets/divider.png" />
+  <div class="content">
+    @for (items of data$; track items) {
+    <app-card
+      class="all-items"
+      [srcImage]="srcImage"
+      [altImage]="'exemplo'"
+      [title]="'Nome: ' + items.name"
+      [subtitle]="'Quantidade: ' + items.quantity"
+      [text]="'Peso: ' + items.measurementUnit"
+      [textTwo]="'Fornecedor: ' + items.supplier"
+      (delete)="deleteItems(items.id)"
+    ></app-card>
+  } @empty {
+    <p>Nenhum item para mostrar</p>
+  }
+  </div>
+</section>

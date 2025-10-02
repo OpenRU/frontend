@@ -1,0 +1,11 @@
+@use '@angular/material' as mat;
+@use 'colors' as *;
+
+:root {
+  @include mat.card-overrides((
+    outlined-container-color: $cream,
+    outlined-outline-color: white,
+    outlined-container-shape: 7px,
+    title-text-weight: 600,
+  ));
+}

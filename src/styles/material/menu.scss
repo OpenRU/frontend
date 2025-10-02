@@ -1,0 +1,11 @@
+@use '@angular/material' as mat;
+@use 'colors' as *;
+
+:root {
+  @include mat.menu-overrides((
+    
+    item-label-text-color: black,
+    container-color: white,
+    item-label-text-size: 15px
+  ));
+}

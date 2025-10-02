@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="form-container">
+    <div class="welcome">
+      <img src="assets/logo.png" alt="logo do sistema" />
+    </div>
+    <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <app-input
+        type="text"
+        label="Nome"
+        placeholder="Digite seu nome"
+        class="auth"
+        [control]="name"
+      ></app-input>
+      <app-input
+        type="text"
+        label="Username"
+        placeholder="Digite seu username"
+        class="auth"
+        [control]="username"
+      ></app-input>
+      <app-input
+        type="text"
+        label="Email"
+        placeholder="Digite seu email"
+        class="auth"
+        [control]="email"
+      ></app-input>
+      <app-input
+        type="tel"
+        label="Telefone"
+        placeholder="Digite seu telefone"
+        class="auth"
+        [control]="phone_number"
+      ></app-input>
+      <app-input
+        type="password"
+        label="Senha"
+        placeholder="Digite sua senha"
+        class="auth"
+        [control]="password"
+      ></app-input>
+      <app-input
+        type="password"
+        label="Confirmar senha"
+        placeholder="Confirme sua senha"
+        class="auth"
+        [control]="confirm_password"
+      ></app-input>
+      <app-button type="submit" text="Cadastrar"></app-button>
+    </form>
+    <div class="create-account">
+      <p>Já possui uma conta?</p>
+      <a routerLink="/login">Acesse</a>
+    </div>
+  </div>
+</div>

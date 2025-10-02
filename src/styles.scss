@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@use "colors" as *;
+@use "styles/material/input.scss";
+@use "styles/material/button.scss";
+@use "styles/material/toolbar.scss";
+@use "styles/material/menu.scss";
+@use "styles/material/card.scss";
+@use "styles/material/datepicker.scss";
+@use "styles/material/progress-bar.scss";
+@use "styles/material/snackbar.scss";
+
+html {
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background: linear-gradient($red);
+}
